@@ -1,0 +1,21 @@
+
+
+QUESTIONS:
+
+1.Select all columns from the contact table where active flag is 1
+sol: select * from contacttable where Active_flag = 1;
+
+2.Deactivate contacts who are opted out
+sol: update contacttable set opt_out = 0 where id= 123;
+
+3.Delete all the contacts who have company name as ‘ABC’
+sol: delete from contacttable where company = 'ABC';
+
+4.Insert a new row with id as 658, name as ‘mili’ , email as ‘mili@gmail.com’, company as ‘DGH’, active flag as 1, opt out flag as 1
+sol: inset into contacttable(id,fname,Email,company,Active_flag,opt_out) values (658,'mili','mili@gmail.com','DGH',1,1);
+
+5.Pull out unique values of company column
+sol: select distinct(company) from contacttable;
+
+6.Update name mili to niti
+sol: update contacttable set fname='niti' where id=658;
